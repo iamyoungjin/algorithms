@@ -32,4 +32,4 @@ for start in range(n): #start를 차례대로 증가시키며 반복
         count +=1
     interval_sum -= data[start]
 
-print(count)
+print(count) 
