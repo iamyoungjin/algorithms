@@ -10,4 +10,4 @@ for i in range(m,int(math.sqrt(n))+1):
             array[i*j] = False
             j+=1
 
-#작성중 
+#작성중 test
