@@ -14,12 +14,21 @@
 기본적은 형태의 소로소 집합 자료구조에서는 루트 노드에 즉시 접근할 수 없어, 부모 테이블을 계속 확인하여 거슬러 올라가야 한다
 '''
 
-#특정 원소가 속한 집합을 찾기
+'''
+#특정 원소가 속한 집합을 찾기 (매우 비효율적)
 def find_parent(parent,x):
 #루트 노드를 찾을 때까지 재귀 호출
     if parent[x] != x:
         return find_parent(parent,parent[x])
     return x 
+'''
+#경로 압축(path compression 찾기함수 개선) : 찾기 함수를 재귀적으로 호출한 뒤에 부모 테이블 값을 바로 갱신
+def find_parent(parent,x):
+    #루트 노드가 아니라면, 루트 노드를 찾을때까지 재귀적으로 호출
+    if parent[x] !=x:
+        parent[x] = find_parent(parent,parent[x])
+    return parent[x]
+     
 #두 원소가 속한 집합을 합치기
 def union_parent(parent,a,b):
     a = find_parent(parent,a)
