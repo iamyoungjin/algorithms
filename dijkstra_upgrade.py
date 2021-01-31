@@ -18,7 +18,7 @@ for _ in range(m):
 
 
 def dijkstra(start):
-    q=[]
+    q=[] #우선순위큐
     heapq.heappush(q,(0,start))  #시작 노드로 가기 위한 최단 거리는 0으로 설정하여 큐에 삽입
     distance[start]=0
     while q: #큐가 비어있지 않다면
@@ -29,7 +29,7 @@ def dijkstra(start):
             cost = dist+i[1] 
             if cost < distance[i[0]]: #현재 노드를 거쳐서, 다른 노드로 이동하는 거리가 더 짧은 경우
                 distance[i[0]] = cost
-                heapq.heappush(q,(cost,i[0]))
+                heapq.heappush(q,(cost,i[0])) #값이 갱신 될때마다 우선순위 큐에 삽입
 
 dijkstra(start) #다익스트라 알고리즘 수행
 
