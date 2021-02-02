@@ -35,6 +35,8 @@ graph=[[]for i in range(v+1)]
 #방향 그래프의 모든 간선 정보를 입력 받기
 for _ in range(e):
     a,b =map(int,input().split())
+    #정점 A에서 B로 이동 가능
+    graph[a].append(b)
     #진입 차수를 1증가
     indegree[b] +=1
 
