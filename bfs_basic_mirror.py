@@ -27,13 +27,14 @@ def bfs(x,y):
 
 
 
-
+#n,m을 공백 기준으로 구분하여 입력 받기
 n,m = map(int,input().split())
-
+#2차원 리스의 맵 정보 입력
 graph =[]
 for i in range(n):
     graph.append(list(map(int,input())))
 
+#이동할 네가지 방향 정의(상 하 좌 우)
 dx = [-1,1,0,0]
 dy = [0,0,-1,1]
 
