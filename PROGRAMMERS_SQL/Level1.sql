@@ -52,3 +52,10 @@ https://programmers.co.kr/learn/courses/30/lessons/59404
 SELECT ANIMAL_ID, NAME, DATETIME FROM ANIMAL_INS
 ORDER BY NAME, DATETIME DESC
 '''
+
+--상위 n개 레코드
+'''
+https://programmers.co.kr/learn/courses/30/lessons/59405
+-- 코드를 입력하세요
+SELECT NAME FROM ANIMAL_INS ORDER BY DATETIME LIMIT 1
+'''
