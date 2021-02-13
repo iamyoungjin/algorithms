@@ -43,3 +43,23 @@ SELECT ANIMAL_ID, NAME
     FROM ANIMAL_INS
     ORDER BY ANIMAL_ID ASC;
 '''
+
+--입양 시각 구하기(1)
+'''
+https://programmers.co.kr/learn/courses/30/lessons/59412
+-- 코드를 입력하세요
+SELECT HOUR(datetime) AS HOUR, COUNT(HOUR(datetime)) AS COUNT FROM ANIMAL_OUTS
+GROUP BY HOUR HAVING HOUR BETWEEN 9 AND 19
+ORDER BY HOUR
+'''
+
+--루시와 엘라 찾기
+'''
+https://programmers.co.kr/learn/courses/30/lessons/59046
+-- 코드를 입력하세요
+select animal_id, name, sex_upon_intake
+from animal_ins
+where name in ('Lucy', 'Ella', 'Pickle', 'Sabrina', 'Mitty', 'Rogan')
+order by animal_id
+
+'''
