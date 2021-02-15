@@ -25,5 +25,14 @@ WHERE B.ANIMAL_ID IS NULL
 
 --or 
 SELECT animal_id , name from animal_outs where animal_id not in (select animal_id from animal_ins)
+'''
 
+--있었는데요 없었습니다
+'''
+https://programmers.co.kr/learn/courses/30/lessons/59043
+-- 코드를 입력하세요
+SELECT A.ANIMAL_ID, A.NAME FROM ANIMAL_INS AS A
+LEFT JOIN ANIMAL_OUTS AS B ON A.ANIMAL_ID = B.ANIMAL_ID
+WHERE A.DATETIME > B.DATETIME 
+ORDER BY A.DATETIME;
 '''
