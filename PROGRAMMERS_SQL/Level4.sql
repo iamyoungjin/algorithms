@@ -17,5 +17,8 @@ JOIN ANIMAL_INS AS B on A.ANIMAL_ID = B.ANIMAL_ID
 WHERE A.SEX_UPON_OUTCOME IN ('Spayed Female', 'Neutered Male')
 AND B.SEX_UPON_INTAKE IN ('Intact Male', 'Intact Female')
 ORDER BY ANIMAL_ID;
+'''
 
+--입양 시각 구하기(2)
+'''
 '''
