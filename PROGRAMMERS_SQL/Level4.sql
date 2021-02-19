@@ -19,6 +19,15 @@ AND B.SEX_UPON_INTAKE IN ('Intact Male', 'Intact Female')
 ORDER BY ANIMAL_ID;
 '''
 
---입양 시각 구하기(2)
+--입양 시각 구하기(2)----------->다시풀기
 '''
+https://programmers.co.kr/learn/courses/30/lessons/59413?language=oracle
+-- 코드를 입력하세요
+SELECT A.HOUR, COUNT(O.ANIMAL_ID) AS COUNT
+FROM (SELECT ROWNUM - 1 AS HOUR FROM DUAL CONNECT BY LEVEL <= 24) A
+LEFT JOIN ANIMAL_OUTS O ON (A.HOUR = EXTRACT(HOUR FROM CAST(O.DATETIME AS TIMESTAMP)))
+GROUP BY A.HOUR
+ORDER BY A.HOUR
+
+
 '''
