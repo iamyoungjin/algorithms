@@ -7,11 +7,11 @@ def solution(answers):
     person2 = [2, 1, 2, 3, 2, 4, 2, 5]
     person3 = [3, 3, 1, 1, 2, 2, 4, 4, 5, 5]
     score1,score2,score3 =0,0,0
-    
-    for i in range(answers):
-        if (answers[i] === person1[i % 5]):
+
+    for i in range(len(answers)):
+        if answers[i] === person1[i % 5]:
             score1+=1
-        if (answers[i] === person2[i % 8]):
+        if answers[i] === person2[i % 8]:
             score2+=1
-        if (answers[i] === person3[i % 10]):
+        if answers[i] === person3[i % 10]:
             score3+=1
