@@ -1,5 +1,5 @@
 import math
-m, n = map(int,input.split())
+m, n = map(int,input().split())
 
 array = [True for i in range(m,n+1)]
 
