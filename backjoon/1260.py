@@ -16,7 +16,6 @@ visit_list=[0]*(N+1)
 
 def dfs(V):
     visit_list[V]=1 #방문한 점 1로 표시
-    print('dfs_visit_list02--->',visit_list)
     print(V, end=' ')
     for i in range(1,N+1):
         if(visit_list[i]==0 and matrix[V][i]==1):
