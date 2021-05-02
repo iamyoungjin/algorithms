@@ -11,7 +11,10 @@ dy = [0, 0, -1, 1]
 def bfs(x, y):  #X Y: 배추가 심어져있는 줄 위치
     queue = [[x, y]]
     while queue:
-        a, b = queue[0][0], queue[0][1]
+        a, b = queue[0][0], queue[0][1]  #x,y
+        print('a:',a)
+        print('b:',b)
+        print('queue--->',queue)
         del queue[0]
         for i in range(4):
             q = a + dx[i]
