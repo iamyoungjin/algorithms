@@ -12,14 +12,15 @@ def bfs(n,m,maze):
         x, y = q.popleft()
         for dx, dy in (-1,0), (1,0), (0,-1), (0,1):
             nx, ny = x+dx, y+dy
-            print('nx,ny-->{},{}'.format(nx,ny))
+            # print('nx,ny-->{},{}'.format(nx,ny))
             if nx < 0 or nx >= m or ny < 0 or ny >= n:
                 continue
             if maze[ny][nx] == '1' and distance[ny][nx] == 0:
                 distance[ny][nx] = distance[y][x] + 1
-                q.append((nx, ny))
-        print('--------')
-        
+                q.append((nx, ny)) 
+        #     print('q-->{}'.format(q)) # 해당 경로에서 갈 수 있는 경로만 담아둠 / 벽일때는 널값
+        # print('--------')
+            #print('distance-->{}'.format(distance))
     return distance[n-1][m-1]
 
 
