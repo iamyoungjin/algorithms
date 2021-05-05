@@ -1,7 +1,7 @@
 # https://www.acmicpc.net/problem/2606
 # 일반적으로 dfs/bfs문제를 풀 때 트리 방식으로 문제를 해결하지만
 # 상위/하위 노드가 정해진것이 아니면 그래프 방식도 가능 
-
+# 전체를 탐험하는 느낌은 bfs로
 
 from sys import stdin
 read = stdin.readline
@@ -33,3 +33,4 @@ def dfs(start, dic):
 visited = []
 dfs(1, dic)
 print(len(visited)-1)
+
