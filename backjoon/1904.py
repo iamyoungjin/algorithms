@@ -1,4 +1,4 @@
-#dynamic programing
+#dynamic programing   210511
 '''
 길이가 i인 수열을 형성하는 방법은 두가지 뿐
 1) i-1 + [1] 
