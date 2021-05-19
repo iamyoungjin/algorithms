@@ -2,8 +2,8 @@ import sys
 input = sys.stdin.readline 
 t = int(input()) 
 for __ in range(t): 
-    k = int(input()) p
-    age = list(map(int, input().split())) 
+    k = int(input()) 
+    page = list(map(int, input().split())) 
     
     table = [[0]*k for _ in range(k) ] 
     for i in range(k-1): 
